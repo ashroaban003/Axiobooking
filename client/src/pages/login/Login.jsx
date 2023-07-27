@@ -21,7 +21,7 @@ export default function Login(params) {
         e.preventDefault();
         dispatch({ type: "LOGIN_START" });
         try {
-          const res = await axios.post("/auth/login", credentials);
+          const res = await axios.post("/api/auth/login", credentials);
           dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
           navigate("/")
         } catch (err) {
