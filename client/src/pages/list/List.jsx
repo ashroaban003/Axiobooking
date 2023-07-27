@@ -16,7 +16,7 @@ export default function List(params) {
     const [min, setMin] = useState("0");
     const [max, setMax] = useState("999");
 
-    const { data, loading,reFetch } = useFetch(`/api/hotels?city=${destination}&min=${min || 0}&max=${max || 999}`);
+    const { data, loading,reFetch } = useFetch(`https://bookserver-o7gv.onrender.com/api/hotels?city=${destination}&min=${min || 0}&max=${max || 999}`);
     const handleClick = () => {
       reFetch();
     };

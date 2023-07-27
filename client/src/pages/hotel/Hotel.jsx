@@ -22,7 +22,7 @@ export default function Hotel(params) {
     const id = location.pathname.split("/")[2];
     const [slideNumber, setSlideNumber] = useState(0);
     const [open, setOpen] = useState(false);
-    const { data, loading} = useFetch(`/api/hotels/find/${id}`);
+    const { data, loading} = useFetch(`https://bookserver-o7gv.onrender.com/api/hotels/find/${id}`);
     const [openModal, setOpenModal] = useState(false);
     const { dates, options } = useContext(SearchContext);
     const navigate = useNavigate();

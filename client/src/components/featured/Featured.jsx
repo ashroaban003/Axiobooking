@@ -2,7 +2,7 @@ import "./feature.css";
 import useFetch from "../../hooks/useFetch";
 
 export default function Featured(params) {
-  const {data,loading}=useFetch("/api/hotels/countByCity?cities=berlin,madrid,london")
+  const {data,loading}=useFetch("https://bookserver-o7gv.onrender.com/api/hotels/countByCity?cities=berlin,madrid,london")
   console.log(data);
     return(
       <div className="featured">
