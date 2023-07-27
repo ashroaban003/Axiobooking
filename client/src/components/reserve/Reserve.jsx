@@ -3,14 +3,14 @@ import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 
 import "./reserve.css";
 import useFetch from "../../hooks/useFetch";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { SearchContext } from "../../context/SearchContext";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 export default function Reserve({setOpen,hotelId}) {
     const [selectedRooms, setSelectedRooms] = useState([]);
-    const { data, loading, error } = useFetch(`/hotels/room/${hotelId}`);
+    const { data } = useFetch(`/hotels/room/${hotelId}`);
     const { dates } = useContext(SearchContext);
     const getDatesInRange = (startDate, endDate) => {
         const start = new Date(startDate);

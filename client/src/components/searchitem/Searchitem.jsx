@@ -1,14 +1,8 @@
 import './searchitem.css';
-import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 export default function Searchitem({item}) {
-  const navigate = useNavigate();
-
-  const handleSearch=()=>{
-    navigate("/hotels/1");       
-  }
-  
+    
     return(
         <div className="searchItem">
         <img
