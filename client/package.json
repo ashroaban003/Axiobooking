@@ -43,5 +43,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://bookserver-o7gv.onrender.com"
+  "proxy": "https://bookserver-o7gv.onrender.com/api"
 }
