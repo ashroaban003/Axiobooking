@@ -2,15 +2,20 @@ import "./mailList.css"
 
 const MailList = () => {
   return (
-    <div className="mail">
-       <div className="white-gradient"></div>
-      <h1 className="mailTitle">Save time, save money!</h1>
-      <span className="mailDesc">Sign up and we'll send the best deals to you</span>
-      <div className="mailInputContainer">
-        <input type="text" placeholder="Your Email" />
-        <button>Subscribe</button>
-      </div>
-    </div>
+    <section className="g-wrapper">
+        <div className="paddings innerwidth g-container">
+            <div className="flexColCenter inner-container">
+                <span className="primaryText">Get started with Axiobooking</span>
+                <span className="secondaryText">subscribe and find suitable and confortable hotels with min price
+                    <br></br>
+                    Find your hotel soon
+                </span>
+               <button className="button">
+                <a href="mailto:ratnakumar48070@gmail.com">Get Started</a>
+               </button>
+            </div>
+        </div>
+       </section>
   )
 }
 

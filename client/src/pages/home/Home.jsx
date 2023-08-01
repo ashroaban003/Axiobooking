@@ -6,18 +6,24 @@ import MailList from "../../components/mailList/MailList";
 import './home.css'
 import Footer from "../../components/footer/Footer";
 import Navbar from "../../components/navbar/Navbar";
+import Contacts from "../../components/Contacts/Contacts";
+import Value from "../../components/Values/Value";
+import Residencies from "../../components/Residencies/Residencies";
 export default function Home() {
     return(
-       <div>
+       <div className="homewrap">
           <Navbar/>
           <Header />
           
           <div className="homeContainer">
-             <Featured/>
-             <h1 className="homeTitle">Browse by property type</h1>
-             <PropertyList/>
-             <h1 className="hometitle">Homes guests love</h1>
-             <FeaturedProperty/>
+             {/* <Featured/> */}
+              <Residencies/>
+             {/* <h1 className="homeTitle">Browse by property type</h1>
+             <PropertyList/> */}
+             <Value/>
+             {/* <h1 className="hometitle">Homes guests love</h1>
+             <FeaturedProperty/> */}
+             <Contacts/>
              <MailList/>
              <Footer/>
           </div>

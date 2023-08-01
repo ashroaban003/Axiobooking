@@ -18,18 +18,18 @@ export default function Navbar(params) {
         <div className="navbar">
             <div className="navContainer">
                 <Link to="/" style={{color:"inherit",textDecoration:"none"}}>
-                <span className="logo">Axiobooking</span>
+                <span className=" logo">Axiobooking</span>
                 </Link>
                 
 
               {user?
               <div>
                  {user.username}
-                 <button className="navButton" onClick={loginClick}>Logout</button>
+                 <button className="navButton button" onClick={loginClick}>Logout</button>
              </div>               
               : (  <div className="navItems">
-                    <button className="navButton" onClick={regClick}>Register</button>
-                    <button className="navButton" onClick={loginClick}>Login</button>
+                    <button className="navButton button" onClick={regClick}>Register</button>
+                    <button className="navButton button" onClick={loginClick}>Login</button>
                 </div>)}
                
             </div>

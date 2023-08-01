@@ -10,6 +10,9 @@ import { DateRange } from "react-date-range";
 import { format } from "date-fns";
 import { useNavigate } from "react-router-dom";
 import { SearchContext} from "../../context/SearchContext";
+import {HiLocationMarker} from 'react-icons/hi'
+import CountUp from "react-countup";
+import {motion} from 'framer-motion'
 // import {Link} from "react-router-dom"
 // import { AuthContext } from "../../context/AuthContext";
 
@@ -88,9 +91,8 @@ export default function Header({type}) {
                
             </div>
         </div> */}
-        <br/>
-        <br/>
-            <div className="headerList">
+       
+           {type==="list" && <div className="headerList">
             <div className="headerListItem active">
             <FontAwesomeIcon icon={faBed} />
             <span>Stays</span>
@@ -111,21 +113,118 @@ export default function Header({type}) {
             <FontAwesomeIcon icon={faTaxi} />
             <span>Airport taxis</span>
             </div>
-           </div>
-           {type!=="list" && <> <h1 className="headerTitle">
+           </div>}
+           {type!=="list" &&
+            <div>
+
+<div className="hero-wrapper">
+            <div className="paddings innerWidth flexCenter hero-container">
+              <div className="hero-left">
+                 <div className="hero-title">
+                        <div className="orange-circle"/>
+                        <motion.h1
+                        initial={{y: "2rem",opacity:0}}
+                        animate={{y:0,opacity:1}}
+                        transition={{
+                            duration: 2,
+                            type: "spring"
+                        }}
+                        >Discover <br/>
+                            Most Suitable<br/>
+                             Hotel</motion.h1>
+                     </div>
+                     <div className="flexColStart hero-des">
+                        <span>Find a variety of hotels that suit u very easily</span>
+                        <span>forget all difficulties in finding a residence for you</span>
+                     </div>
+                     <br></br>
+                     {/* searchbar */}
+                     <div className="secons">
+                     <div className="flexCenter search-bar seconst">
+                        <HiLocationMarker color="var(--blue)" size={25}/>
+                        <button className="button">Search below</button>
+                        </div>
+                     </div>
+          
+
+                     <div className="flexCenter stats">
+                        <div className="flexColCenter stat">
+                               <span>
+                                 <CountUp start={8000} end={9000} duration={3}/>
+                                 <span>+</span>
+                                </span>
+
+                                <span>
+                                    Premium Products
+                                </span>
+                           
+                        </div>
+                        <div className="flexColCenter stat">
+                             <span>
+                                 <CountUp start={1900} end={2000} duration={3}/>
+                                 <span>+</span>
+                             </span>
+
+                                <span>
+                                    Happy Customers
+                                </span>
+                        </div>
+                        <div className="flexColCenter stat">
+                              <span>
+                                 <CountUp  end={28} />
+                                 <span>+</span>
+                             </span>
+
+                                <span>
+                                    Award winning
+                                </span>
+                        </div>
+
+
+                     </div>
+                    
+              </div>
+
+              
+              <div className="flexCenter hero-right">
+                 <motion.div className="timg-container"
+                 initial={{x:"3rem",opacity:10}}
+                 animate={{x:0,opacity:1}}
+                 transition={{
+                    duration: 4,
+                    type: "spring"
+                }}
+                 >
+                    <img src="./images/hero-image.png" alt=""></img>
+                 </motion.div>
+              </div>
+            </div>
+        </div>
+  
+
+
+
+               {/* <h1 className="headerTitle">
               A lifetime of discounts? It's Genius.
             </h1>
             <p className="headerDesc">
               Get rewarded for your travels – unlock instant savings of 10% or
               more with a free Axiobooking account
             </p>
-            <button className="headerBtn">search below</button>
-            <div className="headerSearch">
+            <button className="headerBtn">search below</button> */}
+
+{/* <div className="flexCenter search-bar">
+                        <HiLocationMarker color="var(--blue)" size={25}/>
+                        <input type="text"/>
+                        <button className="button">Search</button>
+                        </div> */}
+
+            <div className="headerSearch flexCenter search-bar">
                 <div className="headerSearchItem">
                 <FontAwesomeIcon icon={faBed} className="headerIcon" />
                 <input
                   type="text"
-                  placeholder="Destination?(berlin,london,etc...)"
+                  placeholder="Destination?(mumbai,banglore,etc...)"
                   className="headerSearchInput"
                   onChange={(e) => setDestination(e.target.value)}
                 />
@@ -174,11 +273,11 @@ export default function Header({type}) {
                    </div>}
                 </div>
                 <div className="headerSearchItem">
-                <button className="headerBtn" onClick={handleSearch}>
+                <button className="button" onClick={handleSearch}>
                   Search
                 </button>
                 </div>
-            </div></> }
+            </div></div> }
         </div>
      </div>
     )

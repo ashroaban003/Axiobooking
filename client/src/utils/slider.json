@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Banglore",
+    "price": "150",
+    "detail": "Jakarta Garden City Street, Cakung. Pulo Gadung, Jakarta Timur, DKI Jakarta",
+    "image": "./images/r1.png"
+  },
+  {
+    "name": "Mumbai",
+    "price": "100",
+    "detail": "Pahlawan Street XVII No.215, Cinangka, Sawangan, Depok, Jawa Barat",
+    "image": "./images/r2.png"
+  },
+  {
+    "name": "chennai",
+    "price": "100",
+    "detail": "Ruko Puri Indah Residence Block A7, Lingkar Street, Ciracas, Serang, Banten",
+    "image": "./images/r3.png"
+  },
+  {
+    "name": "Hyderabad",
+    "price": "120",
+    "detail": "Jakarta Garden City Street, Cakung. Pulo Gadung, Jakarta Timur, DKI Jakarta",
+    "image": "./images/r1.png"
+  },
+  {
+    "name": "Delhi",
+    "price": "130",
+    "detail": "Pahlawan Street XVII No.215, Cinangka, Sawangan, Depok, Jawa Barat",
+    "image": "./images/r2.png"
+  },
+  {
+    "name": "goa",
+    "price": "200",
+    "detail": "Ruko Puri Indah Residence Block A7, Lingkar Street, Ciracas, Serang, Banten",
+    "image": "./images/r3.png"
+  }
+]

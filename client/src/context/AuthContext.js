@@ -17,7 +17,7 @@ const AuthReducer = (state, action) => {
         error: null,
       };
     case "LOGIN_SUCCESS":
-      if(action.payload==="Incorrect email"){
+      if(action.payload==="Incorrect email" || action.payload==="login failed"){
         return {
           user: null,
           loading: false,
